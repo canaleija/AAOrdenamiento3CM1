@@ -9,15 +9,16 @@ package algoritmos;
  *
  * @author Roberto Cruz Leija
  */
-public class Burbuja {
+public class BurbujaOptimizado {
     
     private double tiempo_inicial;
     private double tiempo_final;
     private double tiempo_total;
     private int intercambios;
     private int comparaciones;
-
-    public Burbuja() {
+    
+    
+    public BurbujaOptimizado(){
         this.tiempo_inicial = 0;
         this.tiempo_final = 0;
         this.tiempo_total = 0;
@@ -26,11 +27,12 @@ public class Burbuja {
     }
     
     public void ordenar(double []arreglo){
-           this.tiempo_inicial = System.currentTimeMillis();
+    
+          this.tiempo_inicial = System.currentTimeMillis();
           for(int i = 0; i < arreglo.length - 1; i++)
             {
-            for(int j = 0; j < arreglo.length - 1; j++)
-                 {
+            for(int j = 0; j < arreglo.length - i - 1; j++)
+                 { 
                    this.comparaciones++;
                            
                 if (arreglo[j] > arreglo[j + 1])
@@ -42,12 +44,15 @@ public class Burbuja {
                 }
             }
         }
-          // ya termino 
+          
+          //ya termino 
           this.tiempo_final = System.currentTimeMillis();
           this.tiempo_total = this.tiempo_final - this.tiempo_inicial;
     
     
     }
+    
+    
     
     
 }
