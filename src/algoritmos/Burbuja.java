@@ -9,7 +9,7 @@ package algoritmos;
  *
  * @author Roberto Cruz Leija
  */
-public class Burbuja {
+public class Burbuja implements Algoritmo{
     
     private double tiempo_inicial;
     private double tiempo_final;
@@ -25,6 +25,7 @@ public class Burbuja {
         this.intercambios = 0;
     }
     
+    @Override
     public void ordenar(double []arreglo){
            this.tiempo_inicial = System.currentTimeMillis();
           for(int i = 0; i < arreglo.length - 1; i++)
@@ -47,6 +48,14 @@ public class Burbuja {
           this.tiempo_total = this.tiempo_final - this.tiempo_inicial;
     
     
+    }
+
+    /**
+     * @return the tiempo_total
+     */
+    @Override
+    public double getTiempo_total() {
+        return tiempo_total;
     }
     
     
