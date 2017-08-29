@@ -8,7 +8,9 @@ package aaordenamiento3cm1;
 import algoritmos.Algoritmo;
 import algoritmos.Burbuja;
 import algoritmos.BurbujaOptimizado;
+import algoritmos.InsertSort;
 import herramientas.Comparador;
+import herramientas.Datos;
 import herramientas.Grafica;
 import java.util.ArrayList;
 
@@ -23,13 +25,17 @@ public class AAOrdenamiento3CM1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //double [] datos = new double[]{6,5,3,1,8,7,2,4};
+       
+       
+        
         ArrayList<Algoritmo> algoritmos = new ArrayList<>();
         algoritmos.add(new Burbuja());
         algoritmos.add(new BurbujaOptimizado());
+        algoritmos.add(new InsertSort());
         
         Comparador comparador = new Comparador(algoritmos, 1000, 10);
         comparador.compararAlgoritmos();
+        System.out.println();
     }
    
 }

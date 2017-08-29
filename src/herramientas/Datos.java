@@ -26,4 +26,24 @@ public class Datos {
         return datos;
     }
     
+    public static double[] generarDatosOrdenadosDescendentes(int n){
+    
+        double[] datos = new double[n];
+    
+         for (int x=n-1; x > -1 ; x--){
+             datos[x] = n-x;
+        }
+    return datos;
+    }
+    
+    public static double[] generarDatosOrdenadosAscendentes(int n){
+    
+        double[] datos = new double[n];
+    
+         for (int x=n-1; x > -1 ; x--){
+             datos[x] = x;
+        }
+    return datos;
+    }
+    
 }

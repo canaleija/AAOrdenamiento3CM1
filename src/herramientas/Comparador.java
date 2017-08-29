@@ -39,7 +39,9 @@ public class Comparador {
         for (int i=0; i < this.iteraciones;i++ ){
             
             // ejecutar todos los algoritmos
-            double datos[] = herramientas.Datos.generarDatosAleatorios(this.factorCrecimiento*(i+1), 100);
+            // double datos[] = herramientas.Datos.generarDatosAleatorios(this.factorCrecimiento*(i+1), 100);
+            double datos[] = herramientas.Datos.generarDatosOrdenadosDescendentes(this.factorCrecimiento*(i+1));
+            //double datos[] = herramientas.Datos.generarDatosOrdenadosAscendentes(this.factorCrecimiento*(i+1));
            
             // recorremos la coleccion de los algoritmos
             int a = 0;
