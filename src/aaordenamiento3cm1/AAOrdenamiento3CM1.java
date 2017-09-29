@@ -9,6 +9,9 @@ import algoritmos.Algoritmo;
 import algoritmos.Burbuja;
 import algoritmos.BurbujaOptimizado;
 import algoritmos.InsertSort;
+import algoritmos.Mezcla;
+import algoritmos.QuickSort;
+import algoritmos.Seleccion;
 import herramientas.Comparador;
 import herramientas.Datos;
 import herramientas.Grafica;
@@ -26,14 +29,18 @@ public class AAOrdenamiento3CM1 {
     public static void main(String[] args) {
         // TODO code application logic here
        
-       
+   
+        
         
         ArrayList<Algoritmo> algoritmos = new ArrayList<>();
         algoritmos.add(new Burbuja());
         algoritmos.add(new BurbujaOptimizado());
         algoritmos.add(new InsertSort());
+        algoritmos.add(new Seleccion());
+        algoritmos.add(new Mezcla());
+        //algoritmos.add(new QuickSort());
         
-        Comparador comparador = new Comparador(algoritmos, 1000, 10);
+        Comparador comparador = new Comparador(algoritmos,1000, 10);
         comparador.compararAlgoritmos();
         System.out.println();
     }
